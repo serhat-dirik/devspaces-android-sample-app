@@ -1,0 +1,8 @@
+{
+  "//": "Dev Spaces (Che-Code) installs these recommended extensions from Open VSX on startup.",
+  "recommendations": [
+    "Dart-Code.dart-code",
+    "Dart-Code.flutter",
+    "redhat.vscode-yaml"
+  ]
+}

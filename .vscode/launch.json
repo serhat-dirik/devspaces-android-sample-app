@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter: Web hot reload (IDE debug)",
+      "//": "NOT the same as the 'Web preview' task. The Dart extension owns the dwds connection and forwards it through the IDE itself, so this debug session can hot-reload where the RAW 'flutter run -d web-server' command (which the Web preview task deliberately avoids) goes blank behind the HTTPS gateway. Use this for hot reload + breakpoints; if the tab stays blank in your gateway setup, fall back to the reliable 'Web preview' task (profile build over HTTP, no hot reload).",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "args": ["-d", "web-server", "--web-port", "8080", "--web-hostname", "0.0.0.0"]
+    },
+    {
+      "name": "Flutter: On-cluster Android device",
+      "//": "preLaunchTask runs 'device-status' so adb is connected before the picker opens; then pick the on-cluster device.",
+      "preLaunchTask": "device-status",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart"
+    }
+  ]
+}

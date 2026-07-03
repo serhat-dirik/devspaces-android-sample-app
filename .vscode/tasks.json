@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      // Connects adb to this workspace's on-cluster Android device and prints
+      // its status. Used as the preLaunchTask for the
+      // "Flutter: On-cluster Android device" launch config (L4), so adb is
+      // connected before the device picker opens.
+      "label": "device-status",
+      "type": "shell",
+      "command": "device status",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "shared" }
+    }
+  ]
+}

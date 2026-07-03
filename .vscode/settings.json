@@ -1,0 +1,22 @@
+{
+  "chat.commandCenter.enabled": false,
+  "workbench.startupEditor": "none",
+  "github.copilot.enable": { "*": false },
+  "telemetry.telemetryLevel": "off",
+
+  "editor.formatOnSave": true,
+  "dart.lineLength": 80,
+  "dart.previewHotReloadOnSaveWatcher": true,
+
+  "//devtools-panels": "Browser-IDE limitation: the Flutter DevTools sidebar panels (Inspector / Property Editor / Widget Preview) connect to the Dart VM Service over a DYNAMIC localhost port that can't traverse the Dev Spaces browser gateway, so they show 'can't connect to localhost:<port>'. This is inherent to Flutter DevTools in ANY browser-based IDE (Dev Spaces, Codespaces, Gitpod). Hot reload, breakpoints, the debug console, and editing all work — only these visual panels don't. The settings below keep them from auto-opening in the sidebar so they don't look broken. See the app README.",
+  "dart.openDevTools": "never",
+  "dart.shareDevToolsWithFlutter": false,
+  "dart.devToolsLocation": { "default": "beside", "inspector": "beside" },
+  "dart.flutterWidgetPreview": "disabled",
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false
+  }
+}
