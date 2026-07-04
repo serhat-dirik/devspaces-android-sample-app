@@ -81,6 +81,10 @@ metadata:
   labels: { app: devspaces-android, role: golden-image }
   annotations:
     cdi.kubevirt.io/storage.deleteAfterCompletion: "false"
+    # storage classes with WaitForFirstConsumer never bind a PVC that no pod
+    # consumes — and nothing consumes this disk until a device clones it. Ask
+    # CDI to bind immediately so the import can run.
+    cdi.kubevirt.io/storage.bind.immediate.requested: "true"
 spec:
   source:
     registry:
