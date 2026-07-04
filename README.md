@@ -217,3 +217,26 @@ The one case where you need anything locally (`git` + `oc` — still no Flutter)
    devspaces-android-sample-app && ./check-prereqs.sh`
 
 </details>
+
+---
+
+## Quick test with pre-built images (no platform build)
+
+Want to try this without deploying the full platform? Pre-built images are
+published at `quay.io/serhat_dirik/devspaces-*`. Ask a **cluster admin** to run
+[`./quickstart-cache.sh`](quickstart-cache.sh) once — the images are **large**,
+and without the cache your first `device start` downloads and assembles
+everything (**10+ minutes instead of ~2**). The cluster still needs OpenShift
+Virtualization and Dev Spaces installed.
+
+Then create your workspace: Dev Spaces dashboard → **Create Workspace** → paste
+
+```
+https://raw.githubusercontent.com/serhat-dirik/devspaces-android-sample-app/main/devfile-quay.yaml
+```
+
+> ⚠️ **Your OpenShift user must be able to create VMs in your workspace
+> namespace** — the built-in `edit` role covers it (ask your admin, e.g.
+> `oc adm policy add-role-to-user edit <you> -n <you>-devspaces`). You run the
+> device yourself from the workspace terminal (`device start` / `device stop`)
+> — that's plain Kubernetes, so plain Kubernetes permissions.
