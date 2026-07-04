@@ -17,7 +17,7 @@ projects:
 components:
   - name: tools
     container:
-      image: quay.io/serhat_dirik/devspaces:mobile-allinone
+      image: quay.io/serhat_dirik/devspaces:mobile-allinone@sha256:d9766adef86fec5cfa1e0ae8b1a77e0fefc611e78cd410aab7d266689e25fe85
       # Burstable sizing — the scheduler reserves only the REQUESTS; the LIMITS are
       # the ceiling a native `flutter build apk` (Gradle + Dart AOT, ~12-14Gi peak)
       # can burst to. So a workspace footprint is ~4Gi/1cpu at rest (editing + web
@@ -43,7 +43,7 @@ components:
         # Screen image comes straight from quay (no in-cluster build). Pinned by
         # digest by quay-publish/publish.sh in the platform repo.
         - name: WS_SCRCPY_IMG
-          value: quay.io/serhat_dirik/devspaces:ws-scrcpy
+          value: quay.io/serhat_dirik/devspaces:ws-scrcpy@sha256:f5955d6353e4bcfb8acf6b3f5541dc7b5dbb327fbccf8f998460b286f08843b2
       endpoints:
         - { name: flutter-web, targetPort: 8080, exposure: public, protocol: https }
         - { name: devtools, targetPort: 9100, exposure: public, protocol: https }
