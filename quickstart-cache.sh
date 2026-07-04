@@ -10,7 +10,7 @@
 # Idempotent. Requires cluster-admin. Needs only `oc`.
 set -euo pipefail
 CACHE_NS="${CACHE_NS:-openshift}"
-GOLDEN_IMG="${GOLDEN_IMG:-quay.io/serhat_dirik/devspaces-android-golden:latest}"
+GOLDEN_IMG="${GOLDEN_IMG:-quay.io/serhat_dirik/devspaces:golden}"
 ok(){   printf '  \033[32m✓\033[0m %s\n' "$*"; }
 info(){ printf '  → %s\n' "$*"; }
 fail(){ printf '  \033[31m✗ %s\033[0m\n' "$*" >&2; exit 1; }

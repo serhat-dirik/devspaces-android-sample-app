@@ -223,7 +223,7 @@ The one case where you need anything locally (`git` + `oc` — still no Flutter)
 ## Quick test with pre-built images (no platform build)
 
 Want to try this without deploying the full platform? Pre-built images are
-published at `quay.io/serhat_dirik/devspaces-*`. Ask a **cluster admin** to run
+published at `quay.io/serhat_dirik/devspaces`. Ask a **cluster admin** to run
 [`./quickstart-cache.sh`](quickstart-cache.sh) once — the images are **large**,
 and without the cache your first `device start` downloads and assembles
 everything (**10+ minutes instead of ~2**). The cluster still needs OpenShift
