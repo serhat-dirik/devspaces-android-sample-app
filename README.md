@@ -5,6 +5,14 @@ This is a **sample Flutter app** for the
 Once your admin get your DevSpaces ready for you, the below is the happy path,
 start to finish. Each step is expanded below.
 
+**Reference architecture**
+
+![Reference architecture — browser workspace on OpenShift Dev Spaces talking over adb to a per-workspace Android device VM](images/diagram2-reference-arch.png)
+
+**Developer flow**
+
+![Developer flow — from opening the workspace to running the app on the on-cluster Android device](images/diagram3-flow.png)
+
 1. **Open your workspace:** Dev Spaces dashboard → **"Mobile Dev (Flutter+Android
    VM)"** → wait ~1–2 min.
 2. **Run the Web preview:** **Terminal → Run Task… → "Web preview"** (there's no
